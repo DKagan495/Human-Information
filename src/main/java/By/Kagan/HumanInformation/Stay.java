@@ -2,7 +2,7 @@ package By.Kagan.HumanInformation;
 
 public class Stay implements Abilities{
     @Override
-    public String concreteAbility() {
+    public String getAbility() {
         return " staying";
     }
 }

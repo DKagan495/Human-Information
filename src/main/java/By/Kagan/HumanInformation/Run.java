@@ -2,7 +2,7 @@ package By.Kagan.HumanInformation;
 
 public class Run implements Abilities{
     @Override
-    public String concreteAbility() {
+    public String getAbility() {
         return " running";
     }
 }

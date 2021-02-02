@@ -1,7 +1,10 @@
 package By.Kagan.HumanInformation;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Human {
-    Abilities ability;
+    List<Abilities> ability = new ArrayList<>();
     private String Name, Surname, Patronymic;
     private int Age;
     public Human()
@@ -9,13 +12,15 @@ public class Human {
 
     }
 
-    public void setAbility(Abilities ability) {
-        this.ability = ability;
+    public void setAbility(List<Abilities> ability) {
+        this.ability = (List<Abilities>) ability;
     }
+
 
     public void whatDoes()
     {
-        System.out.println("Human is" + ability.concreteAbility());
+        for(Abilities ability : ability)
+        System.out.println("Human is" + ability.getAbility());
     }
 
     public void setName(String name) {
