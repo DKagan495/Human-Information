@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+    <bean id="runBean"
+          class="By.Kagan.HumanInformation.Run">
+    </bean>
+    <bean id="walkBean"
+          class="By.Kagan.HumanInformation.Walk">
+    </bean>
+    <bean id="stayBean"
+          class="By.Kagan.HumanInformation.Stay">
+    </bean>
+    <bean id="masturbateBean"
+          class="By.Kagan.HumanInformation.Masturbate">
+    </bean>
+    <bean id="sleepBean"
+          class="By.Kagan.HumanInformation.Sleep">
+    </bean>
+    <bean id="birthBean"
+          class="By.Kagan.HumanInformation.Birth">
+    </bean>
+    <bean id="deathBean"
+          class="By.Kagan.HumanInformation.Death">
+    </bean>
+    <context:property-placeholder location="classpath:human.properties"/>
+    <bean id="humanBean"
+          class="By.Kagan.HumanInformation.Human">
+        <property name = "ability" ref="${human.ability}Bean"/>
+        <property name ="name" value="${human.name}"/>
+        <property name = "surname" value="${human.surname}"/>
+        <property name = "patronymic" value="${human.patronymic}"/>
+        <property name = "age" value="${human.age}"/>
+    </bean>
+
+</beans>
