@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Human {
-    List<Abilities> ability = new ArrayList<>();
+    Abilities ability;
     private String Name, Surname, Patronymic;
     private int Age;
     public Human()
@@ -12,14 +12,13 @@ public class Human {
 
     }
 
-    public void setAbility(List<Abilities> ability) {
-        this.ability = (List<Abilities>) ability;
+    public void setAbility(Abilities ability) {
+        this.ability =  ability;
     }
 
 
     public void whatDoes()
     {
-        for(Abilities ability : ability)
         System.out.println("Human is" + ability.getAbility());
     }
 

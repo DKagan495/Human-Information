@@ -29,19 +29,19 @@
           class="By.Kagan.HumanInformation.Death">
     </bean>
     <context:property-placeholder location="classpath:human.properties"/>
+
     <bean id="humanBean"
-          class="By.Kagan.HumanInformation.Human">
-        <property name="ability">
-        <list>
-            <ref bean="runBean"/>
-            <ref bean="birthBean"/>
-            <ref bean="sleepBean"/>
-        </list>
-        </property>
+          class="By.Kagan.HumanInformation.Human"
+            scope="prototype">
+
+        <property name="ability" ref="${human.ability}Bean"/>
         <property name ="name" value="${human.name}"/>
         <property name = "surname" value="${human.surname}"/>
         <property name = "patronymic" value="${human.patronymic}"/>
         <property name = "age" value="${human.age}"/>
+
     </bean>
+
+
 
 </beans>
